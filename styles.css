@@ -274,6 +274,7 @@ button:focus-visible {
   padding: 1.5rem;
   z-index: 999;
 }
+.lightbox[hidden] { display: none !important; }
 .lightbox img { max-height: 88vh; border-radius: var(--radius); }
 .lightbox-close {
   position: absolute;

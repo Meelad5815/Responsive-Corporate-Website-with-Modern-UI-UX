@@ -56,12 +56,16 @@ const lightboxImage = document.getElementById('lightboxImage');
 const lightboxClose = document.getElementById('lightboxClose');
 
 function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.hidden = true;
+  if (lightboxImage) lightboxImage.removeAttribute('src');
   lightbox.hidden = true;
   document.body.style.overflow = '';
 }
 
 document.querySelectorAll('[data-lightbox]').forEach((button) => {
   button.addEventListener('click', () => {
+    if (!lightbox || !lightboxImage) return;
     lightboxImage.src = button.dataset.lightbox;
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
