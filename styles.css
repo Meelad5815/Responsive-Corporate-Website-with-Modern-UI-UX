@@ -139,6 +139,7 @@ button:focus-visible {
 .card-grid,
 .portfolio-grid,
 .blog-grid,
+.author-grid,
 .contact-grid,
 .footer-grid {
   display: grid;
@@ -151,6 +152,8 @@ button:focus-visible {
 .project-card,
 .blog-card,
 .team-card,
+.author-card,
+.author-contact,
 .contact-form,
 .map-wrap {
   background: var(--surface);
@@ -222,6 +225,23 @@ button:focus-visible {
   font-weight: 600;
 }
 
+
+.author-grid { align-items: start; }
+.author-contact ul {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+}
+.author-contact li { margin-bottom: 0.45rem; }
+.author-contact a:not(.btn) {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.author-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
 .map-wrap iframe {
   width: 100%;
   min-height: 280px;
@@ -306,6 +326,7 @@ button:focus-visible {
   .card-grid,
   .portfolio-grid,
   .blog-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .author-grid { grid-template-columns: 1.4fr 1fr; }
   .contact-grid,
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
